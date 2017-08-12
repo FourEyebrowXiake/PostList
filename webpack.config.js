@@ -1,5 +1,5 @@
 module.exports = {
-  entry: ["./src/index.js"],
+  entry: __dirname + "/src/index.js",
   output: {
     path: __dirname,
     publicPath: "/",
@@ -13,6 +13,18 @@ module.exports = {
         query: {
           presets: ["react", "es2015", "stage-1"]
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },

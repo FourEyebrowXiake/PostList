@@ -1,0 +1,31 @@
+.post-item {
+  margin-bottom: 36px;
+	padding: 24px;
+	box-shadow: 0 0 8px  #cbd9e4;
+  h3.title {
+		color: lighten($black, 10);
+  }
+
+	hr {
+		color: $deep-grey;
+		width: auto;
+	}
+  .content {
+		height: 200px;
+    line-height: 1.7em;
+    margin-bottom: 16px;
+		overflow: hidden;
+  }
+  .user {
+		padding-bottom: 8px;
+  }
+	.date {
+
+	}
+	.read-more {
+		a {
+			color: lighten($red, 10);
+    }
+	}
+
+}
