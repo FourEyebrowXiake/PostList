@@ -19,7 +19,7 @@ class PostsIndex extends Component {
     return _.map(this.props.posts, post => {
       return (
         <div>
-        <Col md={6} key={post.id}>
+        <Col md={4} key={post.id}>
           <PostItem post={post} />
         </Col>
         </div>
@@ -28,14 +28,9 @@ class PostsIndex extends Component {
   }
 
   render() {
-    const transitionOptions = {
-      transitionName: "postitems",
-      transitionEnterTimeout: 500,
-      transitionLeaveTimeout: 500
-    };
     return (
         <Grid  >
-          <Row md={10} mdOffset={1} >
+          <Row  >
               {this.renderPosts()}
           </Row>
         </Grid>

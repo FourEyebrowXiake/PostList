@@ -2,34 +2,14 @@
 @import "./posts/post_list";
 @import "./parts/buttons";
 @import "./parts/navbar";
+@import "./posts/page";
+@import "./posts/new";
 
 body {
 	background: #FFF;
 }
 
-//Animation of React Components
-.postitems-enter {
-	opacity: 0;
-}
-
-.postitems-enter-active {
-	opacity: 1;
-	-webkit-transition: .3s ease-in opacity;
-	-moz-transition: .3s ease-in opacity;
-	-ms-transition: .3s ease-in opacity;
-	-o-transition: .3s ease-in opacity;
-	transition: .3s ease-in opacity;
-}
-
-.postitems-leave {
-	opacity: 1;
-}
-
-.postitems-leave-active {
-	opacity: 0;
-	-webkit-transition: .3s ease-in opacity;
-	-moz-transition: .3s ease-in opacity;
-	-ms-transition: .3s ease-in opacity;
-	-o-transition: .3s ease-in opacity;
-	transition: .3s ease-in opacity;
+.center-layout {
+	width: 300px;
+	margin: 0 auto;
 }

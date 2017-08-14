@@ -1,0 +1,40 @@
+.page {
+	width: 60%;
+	margin: 0 auto;
+
+	h1.title {
+		color: #3b444f;
+		text-align: center;
+	}
+	.date {
+		margin-top: 16px;
+		text-align: center;
+		color: $deep-grey;
+	}
+	.date:before {
+		padding-right: 6px;
+	}
+	.content {
+		margin-top: 48px;
+		text-align: center;
+	}
+	a {
+		&:hover {
+          text-decoration: none;
+        }
+	}
+}
+
+.progress-bar {
+	background-color: black ;
+}
+
+.loading  {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 30%;
+
+	p {
+		text-align: center;
+	}
+}

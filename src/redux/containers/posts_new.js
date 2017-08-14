@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import Textarea from 'react-textarea-autosize';
+
 import { createPost } from "../actions";
 
 class PostsNew extends Component {
@@ -12,7 +14,7 @@ class PostsNew extends Component {
     return (
       <div className={className}>
         <label>{field.label}</label>
-        <input className="form-control" type="text" {...field.input} />
+        <Textarea className="form-textarea" type="text" {...field.input} />
         <div className="text-help">
           {touched ? error : ""}
         </div>
@@ -37,8 +39,8 @@ class PostsNew extends Component {
           component={this.renderField}
         />
         <Field
-          label="Categories"
-          name="categories"
+          label="Description"
+          name="description"
           component={this.renderField}
         />
         <Field
@@ -46,28 +48,33 @@ class PostsNew extends Component {
           name="content"
           component={this.renderField}
         />
+      <div className="center-layout">
         <button type="submit" className="btn btn-primary">Submit</button>
         <Link to="/" className="btn btn-danger">Cancel</Link>
+      </div>
       </form>
     );
   }
 }
 
 function validate(values) {
-  // console.log(values) -> { title: 'asdf', categories: 'asdf', content: 'asdf' }
+
   const errors = {};
 
   // Validate the inputs from 'values'
   if (!values.title) {
     errors.title = "Enter a title";
   }
-  if (!values.categories) {
-    errors.categories = "Enter some categories";
+  if (!values.description) {
+    errors.description = "Enter some description";
   }
   if (!values.content) {
     errors.content = "Enter some content please";
   }
-
+  let desciption = values.description + "";
+  if (desciption.length > 60) {
+    errors.description = "字数不得超过30";
+  }
   // If errors is empty, the form is fine to submit
   // If errors has *any* properties, redux form assumes form is invalid
   return errors;

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import Header from "../../components/navigation/Header"
+import Header from "../../components/parts/Header";
 
 class PostNavigation extends Component {
 	render() {

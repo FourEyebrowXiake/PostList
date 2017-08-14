@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Col, Row } from 'react-bootstrap';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class PostItem extends Component {
 	render() {
@@ -17,14 +16,7 @@ export default class PostItem extends Component {
 						<div className="content">{post.content}</div>
 					</Col>
 				</Row>
-				<Row>
-					<Col md={6}>
-						<div className="user">{post.categories}</div>
-					</Col>
-					<Col md={6}>
-						<div className="date"><div>2017.8.11</div></div>
-					</Col>
-				</Row>
+
 				<hr />
 				<Row>
 					<Col md={6}>

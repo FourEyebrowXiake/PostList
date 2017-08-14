@@ -4,6 +4,9 @@
 	box-shadow: 0 0 8px  #cbd9e4;
   h3.title {
 		color: lighten($black, 10);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
 	hr {
@@ -11,17 +14,12 @@
 		width: auto;
 	}
   .content {
-		height: 200px;
+		height: 150px;
     line-height: 1.7em;
     margin-bottom: 16px;
 		overflow: hidden;
   }
-  .user {
-		padding-bottom: 8px;
-  }
-	.date {
 
-	}
 	.read-more {
 		a {
 			color: lighten($red, 10);
